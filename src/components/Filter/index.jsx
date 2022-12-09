@@ -100,8 +100,8 @@ export const Filter = () => {
           onChange={onChangeSort}
         >
           <SelectAnt.Option value={''}>Select Sort</SelectAnt.Option>
-          <SelectAnt.Option value={'asc'}>O'suvchi</SelectAnt.Option>
-          <SelectAnt.Option value={'desc'}>Kamayuvchi</SelectAnt.Option>
+          <SelectAnt.Option value={'asc'}>Increase</SelectAnt.Option>
+          <SelectAnt.Option value={'desc'}>Decrease</SelectAnt.Option>
         </SelectAnt>
 
         <SelectAnt value={value} onChange={onChangeCategory}>

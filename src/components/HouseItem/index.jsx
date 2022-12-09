@@ -54,7 +54,7 @@ export const HouseItem = () => {
               return data?.attachments?.length > 5 && index === 3 ? (
                 <Blur.Container>
                   <ImageContainer.Subimg
-                    key={value.id}
+                    key={index}
                     src={value?.imgPath}
                     alt="test"
                   />
@@ -62,7 +62,7 @@ export const HouseItem = () => {
                 </Blur.Container>
               ) : (
                 <ImageContainer.Subimg
-                  key={value.id}
+                  key={index}
                   src={value?.imgPath}
                   alt="test"
                 />
@@ -74,7 +74,7 @@ export const HouseItem = () => {
         <Container flex={3}>
           <Section>
             <Content>
-              <Content.Title large>{data?.name}</Content.Title>
+              <Content.Title large>{data?.address}</Content.Title>
               <div className="info">
                 {data?.city},{data?.address}, {data?.country}
               </div>
