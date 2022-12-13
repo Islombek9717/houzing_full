@@ -17,7 +17,7 @@ export const Button = ({
       width={width}
       height={height}
     >
-      {children || "Generic Button"}
+      {children || "Profile"}
     </Container>
   );
 };
