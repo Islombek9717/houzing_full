@@ -209,7 +209,7 @@ export const AddNewHouse = () => {
           <Section flex>
             {imgs.map((value) => {
               return (
-                <pre>
+                <pre key={value?.id}>
                   {value?.imgPath}{" "}
                   <IconDelete
                     onClick={() => {
