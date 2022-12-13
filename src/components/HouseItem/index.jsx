@@ -25,12 +25,8 @@ import {
 export const HouseItem = () => {
   const [data, setData] = useState({});
   const params = useParams();
-  // const request = useRequest();
 
   useEffect(() => {
-    // request({ url: `/houses/list/${params?.id}` }).then((res) =>
-    //   setData(res?.data || [])
-    // );
     fetch(`https://houzing-app.herokuapp.com/api/v1/houses/id/${params?.id}`)
       .then((res) => res.json())
       .then((res) => {

@@ -1,5 +1,5 @@
-import React from "react";
-import { Outlet, useNavigate} from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Outlet, useNavigate, useParams} from "react-router-dom";
 import { navbar } from "../../utils/navbar";
 import Filter from "../Filter";
 import { Button } from "../Generic/Button";
@@ -7,7 +7,21 @@ import { Container, Link, Logo, Main, Menu, Section, Wrapper } from "./style";
 import Footer from "../Footer";
 import { Dropdown } from "antd";
 
+
+
 export const Home = () => {
+
+  const [data, setData] = useState({});
+  const params = useParams();
+
+  useEffect(() => {
+    fetch(`https://houzing-app.herokuapp.com/api/v1/houses/id/${params?.id}`)
+      .then((res) => res.json())
+      .then((res) => {
+        setData(res?.data);
+        window.scrollTo(0, 0);
+      });
+  }, [params?.id]);
 
 
   let token = localStorage.getItem("token");
@@ -72,7 +86,7 @@ export const Home = () => {
                 trigger="click"
               >
                 <Button type="dark">
-                  <div>Profile</div>
+                {data?.user?.firstname}
                 </Button>
               </Dropdown>
             ) : (

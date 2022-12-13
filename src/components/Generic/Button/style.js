@@ -7,6 +7,7 @@ const getType = ({ type }) => {
         background: "transparent",
         border: "1px solid #FFFFFF",
         color: "white",
+        textTransform: "capitalize",
       };
     case "light":
       return {
@@ -42,6 +43,7 @@ const Container = styled.button`
   align-items: center;
   border-radius: 2px;
   min-width: 120px;
+  
 
   font-size: ${({ fontSize }) => (fontSize ? `${fontSize}px` : "14px")};
   height: ${({ height }) => (height ? `${height}px` : "44px")};
