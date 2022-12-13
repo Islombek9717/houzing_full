@@ -13,7 +13,7 @@ const Container = styled.div`
   margin: ${({ gap }) => {
     return gap && `0 ${gap}px`;
   }};
-  height: 430px;
+  height: 440px;
   background: white;
   border: 1px solid #e6e9ec;
   :hover {
